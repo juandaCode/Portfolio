@@ -158,7 +158,7 @@ nav {
     align-items: center;
     background-color: transparent;
     color: var(--white);
-    border: 3px solid white;
+    border: 5px solid white;
     font-size: 2.0rem;
     font-weight: bold;
 }
@@ -178,6 +178,22 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
+}
+.explore {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: transparent;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: none;
+    border-top: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+.explore:hover{
+    cursor: pointer;
+
 }
 .web-development {
     background-color: #FEC84E;
@@ -219,6 +235,10 @@ nav {
     width: 100%;
     height: 25vh;
     color: var(--white);
+}
+.footer-container {
+    display: flex;
+    justify-content: center;
 }
 
 /* Tutorial Diagonal*/
