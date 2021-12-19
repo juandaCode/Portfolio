@@ -15,6 +15,14 @@ html {
     font-family: "DM Sans", sans-serif;
     background-color: #FFB633;
 }
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--main-color);
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:#FFB633;
+}
 .main {
     width: 100%;
     height: 70vh;
@@ -109,24 +117,7 @@ nav {
     z-index: 2;
    
 }
-.section_description {
-    width: 100%;
-    background-color: var(--main-color);
-    padding-top: 20px;
-}
-.description {
-   width: 70%;
-   height: auto;
-    
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-}
-.description_subtitle {
-    font-size: 2.4rem;
-    color: var(--white);
-    margin-left: 30px;
-    text-align: center;
-}
+
 .describe {
     color: var(--white);
     grid-row-start: 3;
@@ -141,6 +132,7 @@ nav {
     text-align: center;
     display: flex;
     justify-content: center;
+    padding-top: 50px;
 }
 .about-me .container {
     width: 50%;
@@ -149,7 +141,7 @@ nav {
     margin: 20px 0;
     font-size: 1.8rem;
     color: var(--white);
-
+    padding-bottom: 30px;
 }
 .main-buttons {
     width: 30%;
@@ -185,20 +177,23 @@ nav {
 }
 .services {
     background-color: var(--main-color);
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr); 
     width: 100%;
-    height: 70vh;
-    display: grid;
+    display: flex;
     justify-content: center;
-    border: 5px solid var(--gray);
-    gap: 20px;
-    grid-auto-flow: column;
-    align-content: center;
     /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
+}
+.services-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    width: 50%;
+    display: grid;
+    place-content: center;
+    gap: 30px;
+    grid-auto-flow: column;
+    align-content: center;
 }
 .explore {
     color: var(--white);
@@ -216,29 +211,30 @@ nav {
     cursor: pointer;
 
 }
-.web-development {
+.service {
+    width: 100%;
+    height: 30vh;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service:nth-child(1) {
     background-color: #FEC84E;
-    width: 70%;
-    height: 30vh;
-    border-radius: 15px;
 }
-.software {
+.service:nth-child(2) {
     background-color: #1DE;
-    width: 70%;
-    height: 30vh;
-    border-radius: 15px;
 }
-.app {
+.service:nth-child(3){
     background-color: #39B4FF;
-    width: 70%;
-    height: 30vh;
-    border-radius: 15px;
 }
-.web-ui {
+.service:nth-child(4) {
     background-color: #DF5CD6;
-    width: 70%;
-    height: 30vh;
-    border-radius: 15px;
+}
+.service-title {
+    color: white;
+    font-weight: bold;
+    font-size: 2.2rem;
 }
 .skills {
     background-color: var(--main-color);
@@ -304,21 +300,86 @@ nav {
 .contact-me {
     background-color: var(--main-color);
     width: 100%;
-    height: 40vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
 }
-
-
-
-
+.contact-me-container {
+    width: 60%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.contact-me-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.contact-me-form input {
+    margin: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+    color: white;
+    font-weight: bold;
+}
+.contact-me-form input::placeholder {
+    padding-left: 10px;
+}
+.contact-me-form input:last-child {
+    border: 2px solid white;
+    color:white;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+.contact-me-form input:last-child:hover {
+    cursor: pointer;
+}
+.contact-me-form input:focus {
+    outline: none;
+    padding-left: 5px;
+}
+.message {
+    margin: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+    height: 15vh;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.message:focus {
+    outline: none;
+    padding-left: 5px;
+}
+.message::placeholder {
+    padding-left: 10px;
+}
+.contact-me button {
+    margin-bottom: 15px;
+}
 .footer {
     background-color: #1A1A1A;
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     color: var(--white);
 }
 .footer-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.github {
+   
+    object-fit: cover;
+    background-image: url('./assets/github.png');
 }
 
 /* Tutorial Diagonal*/
@@ -337,3 +398,31 @@ nav {
     background-color: #FFB633;
 }
 /* Fin Tutorial*/
+.certificate {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30vh;
+}
+.certificate-title {
+    color: white;
+    padding-bottom: 30px;
+}
+.certificate-subtitle {
+    color: white;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.link-github {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 230px;
+}
+.link-github:hover {
+    text-decoration: underline;
+    color: #FEC84E;
+}
