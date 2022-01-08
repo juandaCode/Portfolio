@@ -176,6 +176,13 @@ nav {
     font-weight: bold;
     align-self: center;
 }
+.main-buttons-dark a {
+    color: var(--black);
+    text-decoration: none;
+}
+.main-buttons-dark a:hover {
+    color: var(--white);
+}
 .main-buttons-dark:hover {
     background-color: var(--black);
     color: var(--white);
@@ -222,6 +229,7 @@ nav {
     height: 30vh;
     border-radius: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -241,6 +249,7 @@ nav {
     color: white;
     font-weight: bold;
     font-size: 2.2rem;
+    margin-top: 10px;
 }
 
 .skills {
@@ -300,9 +309,27 @@ nav {
     background-color: #1A1A1A;
     padding: 80px 0;
 }
+.projects span {
+    position: relative;
+}
 .project {
     width: 33.2%;
     height: 40vh;
+    opacity: 0.9;
+}
+.project:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+.repo-title {
+    position: absolute;
+    color: var(--white);
+    font-weight: bold;
+    top: calc(50% - 150px);
+    left: calc(50% - 60px);
+}
+.repo {
+    text-align: center;
 }
 .contact-me {
     background-color: var(--main-color);
@@ -420,7 +447,7 @@ nav {
         transform: rotateZ(0deg);
     }
     100% {
-        transform: rotateZ(364deg);
+        transform: rotateZ(360deg);
     }
 }
 .certificate-subtitle {
